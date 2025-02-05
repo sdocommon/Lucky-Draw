@@ -73,7 +73,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)),url("Background100.svg");
+            background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url("Background100.svg");
             background-size: cover;
         }
 
@@ -225,7 +225,7 @@
                 setupBoxes();
             }
         });
-        
+
 
         document.getElementById("drawButton").addEventListener("click", function () {
             // 若正在滾動或名單為空，則不動作
@@ -285,6 +285,20 @@
                 isRolling = false;
             }, 3000);
         });
+
+        document.addEventListener('keydown', (event) => {
+            switch (event.code) {
+                case 'ArrowUp': // 遥控器的上键
+                    document.getElementById("drawButton").click(); // 模拟点击 Button 1
+                    break;
+                case 'ArrowDown': // 遥控器的下键
+                    document.getElementById("drawButton").click(); // 模拟点击 Button 1
+                    break;
+                default:
+                    console.log(`Unhandled key: ${event.code}`);
+            }
+        });
+
     </script>
 </body>
 
