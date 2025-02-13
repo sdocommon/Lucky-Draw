@@ -103,13 +103,13 @@ body {
 }
 
 .door {
-    background: #ffffff;
+    background: #ffc75e;
     width: 70%;
     height: 150px;
     overflow: hidden;
     border-radius: 5px;
     position: relative;
-    border: 10px solid #ffa601;
+    /*border: 10px solid #e03f3f;*/
     transition: all 0.5s ease-in-out; 
 
 }
@@ -139,7 +139,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 4rem;
-    background-color: #ffffff;
+    background-color: #ffc75e;
     box-sizing: border-box;
 }
 
