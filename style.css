@@ -73,7 +73,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url("Background100.svg");
+    background-image: url("Background100.svg");
     background-size: cover;
 }
 
