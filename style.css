@@ -187,7 +187,23 @@ text {
 
 #chart.visible {
     opacity: 1;
+
 }
 #chart.hidden {
     visibility: hidden;
+}
+.flex-column-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none; 
+    padding: 0; 
+}
+
+.flex-column-list .list-group-item {
+    flex: 1 1 calc(50% - 1rem);
+    text-align: center; 
+}
+.custom-height {
+    max-height: 90vh; 
 }

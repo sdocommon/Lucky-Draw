@@ -1,4 +1,5 @@
 import {spin} from "./wheel.mjs"
+import {playSound,stopSound} from "./soundEffect.mjs"
 let names = [];
 // 是否正在滾動（避免重複點擊）
 let isRolling = false;
@@ -10,7 +11,6 @@ setupBoxes();
 // Sidebar toggle functionality
 const toggleSidebarBtn = document.getElementById("toggleSidebar");
 const sidebar = document.getElementById("sidebar");
-
 toggleSidebarBtn.addEventListener("click", () => {
     sidebar.classList.toggle("hidden"); // 切换隐藏状态
 });
@@ -46,6 +46,8 @@ saveButton.addEventListener("click", function () {
         currentPosition = 0;
         setupBoxes();
         saveButton.disabled = true;
+        playSound();
+        stopSound();
     }
 });
 
@@ -56,7 +58,6 @@ document.getElementById("drawButton").addEventListener("click", function () {
 
     const boxesContainer = document.getElementById("boxes");
     const winnerDisplay = document.getElementById("winner");
-    const winSound = document.getElementById("winSound");
     const chart = document.getElementById("chart");
     const door = document.getElementById("door");
     
@@ -86,6 +87,7 @@ document.getElementById("drawButton").addEventListener("click", function () {
             box.textContent = names[i % names.length];
             boxesContainer.appendChild(box);
         }
+        playSound();
 
         isRolling = true;
         // 加上動畫效果
@@ -102,8 +104,6 @@ document.getElementById("drawButton").addEventListener("click", function () {
 
             // 顯示中獎資訊
             winnerDisplay.textContent = `🎉 Congratulations, ${names[winnerIndex]}! 🎉`;
-            // 播放音效
-            winSound.play();
 
             // 把這位幸運兒 從陣列中移除 (下次就不會再被抽到)
             names.splice(winnerIndex, 1);
@@ -118,6 +118,7 @@ document.getElementById("drawButton").addEventListener("click", function () {
             alert("Not enough names");
             return;
         }
+        playSound();
         winnerDisplay.textContent = ""
         door.classList.add("invisible")
         chart.classList.add("visible");
