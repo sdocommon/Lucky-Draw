@@ -45,7 +45,7 @@ saveButton.addEventListener("click", function () {
         // 新增完名單，重置位置並重新建構箱子
         currentPosition = 0;
         setupBoxes();
-        //saveButton.disabled = true;
+        saveButton.disabled = true;
     }
 });
 
