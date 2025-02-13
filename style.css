@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    overflow: auto;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #f8f9fa;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+.sidebar h2 {
+    margin-top: 60px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.sidebar textarea {
+    width: 100%;
+    height: 60%;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.sidebar input[type=number] {
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+.sidebar button {
+    margin-top: 20px;
+    background-color: #eca828;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar button:hover {
+    background-color: #eca828;
+}
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url("Background100.svg");
+    background-size: cover;
+}
+
+.toggle-sidebar-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #eca828;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-sidebar-btn:hover {
+    background-color: #eca828;
+}
+
+.main h1 {
+    font-size: 72px;
+    color: #ffa601;
+    margin-bottom: 20px;
+}
+
+.door {
+    background: #ffc75e;
+    width: 70%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+    /*border: 10px solid #e03f3f;*/
+    transition: all 0.5s ease-in-out; 
+
+}
+.door.invisible{
+    opacity: 0;
+}
+
+.boxes {
+    position: absolute;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    /* 動畫過渡效果 */
+
+}
+
+.boxes.expanded {
+    width: 500px;
+    height: 350px;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+
+.box {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    background-color: #ffc75e;
+    box-sizing: border-box;
+}
+
+
+button#drawButton {
+    background-color: #eca828;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button#drawButton:hover {
+    background-color: #ff8800;
+}
+
+.winner {
+    margin-top: 20px;
+    font-size: 52px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+text {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    pointer-events: none;
+}
+
+#chart {
+    opacity: 0;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: all 0.5s ease-in-out; 
+}
+
+#chart.visible {
+    opacity: 1;
+}
+#chart.hidden {
+    visibility: hidden;
+}
