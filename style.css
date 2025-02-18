@@ -73,7 +73,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("Background100.svg");
+    background-image: url("Background 4.svg");
     background-size: cover;
 }
 
@@ -94,12 +94,15 @@ body {
 
 .toggle-sidebar-btn:hover {
     background-color: #eca828;
+    -webkit-text-stroke: #333;
 }
 
 .main h1 {
     font-size: 72px;
-    color: #ffa601;
+    font-weight: bold;
+    color: #ffc75e;
     margin-bottom: 20px;
+    text-shadow: 5px 5px 7px #292525;
 }
 
 .door {
@@ -109,8 +112,9 @@ body {
     overflow: hidden;
     border-radius: 5px;
     position: relative;
-    /*border: 10px solid #e03f3f;*/
+    border: 10px solid #e71d1d;
     transition: all 0.5s ease-in-out; 
+    box-shadow: 5px 5px 7px #292525;
 
 }
 .door.invisible{
@@ -138,9 +142,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4rem;
+    font-size: 52px;
     background-color: #ffc75e;
     box-sizing: border-box;
+    /*color: #ffc75e;
+    text-shadow: 2px 2px 2px #292525;*/
 }
 
 
@@ -149,11 +155,14 @@ button#drawButton {
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 20px;
+    height: 100px;
+    width: 200px;
+    box-shadow: 5px 5px 7px #292525;
 }
 
 button#drawButton:hover {
@@ -161,11 +170,11 @@ button#drawButton:hover {
 }
 
 .winner {
-    margin-top: 20px;
     font-size: 52px;
     font-weight: bold;
-    color: #333;
+    color: #ffc75e;
     text-align: center;
+    text-shadow: 5px 5px 7px #292525;
 }
 
 text {
@@ -206,4 +215,10 @@ text {
 }
 .custom-height {
     max-height: 90vh; 
+}
+.title-font{
+    font-size: 52px;
+}
+.list-font{
+    font-size: 32px;
 }

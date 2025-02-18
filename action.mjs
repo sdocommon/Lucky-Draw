@@ -141,8 +141,8 @@ document.getElementById("drawButton").addEventListener("click", function () {
                 const li = document.createElement("li");
                 li.textContent = name;
                 li.className = "list-group-item";
-                li.style.backgroundColor = "#eca828";
-                li.style.border = "1px solid #f8d98c"
+                li.style.backgroundColor = "#eca828"
+                li.style.border = "1px solid #333"
                 pickedNamesList.appendChild(li);
             });
     
